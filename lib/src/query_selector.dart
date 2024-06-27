@@ -187,7 +187,8 @@ class SelectorEvaluator extends Visitor {
     // :before, :after, :first-letter/line can't match DOM elements.
     if (_isLegacyPsuedoClass(node.name)) return false;
 
-    throw _unimplemented(node);
+    return true;
+    // throw _unimplemented(node);
   }
 
   static bool _isLegacyPsuedoClass(String name) {
